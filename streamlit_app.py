@@ -2,6 +2,12 @@ import streamlit as st
 import requests
 import io
 from PIL import Image
+
+def query_stabilitydiff(payload, headers):
+    API_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0"
+    response = requests.post(API_URL, headers=headers, json=payload)
+    return response.content
+
 st.title("💬 Chatbot - Text to Image")
 st.caption("🚀 A Streamlit chatbot powered by Stable Diffusion")
 if "messages" not in st.session_state:
