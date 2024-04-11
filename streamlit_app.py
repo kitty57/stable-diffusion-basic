@@ -9,7 +9,7 @@ def query_stabilitydiff(payload, headers):
     return response.content
 
 st.title("💬 Chatbot - Text to Image")
-st.caption("🚀 A Streamlit chatbot powered by Stable Diffusion")
+st.caption("🚀 A chatbot that uses Stable Diffusion")
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
         {"role": "assistant", "content": "What do you want to see? (example: a working women)"}]
