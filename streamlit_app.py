@@ -33,4 +33,4 @@ if prompt := st.chat_input():
 
     st.session_state.messages.append({"role": "assistant", "content": msg, "prompt": prompt, "image": image})
     st.chat_message("assistant").write(msg)
-    st.chat_message("assistant").image(image, caption=prompt, use_column_width=True)
+    st.chat_message("assistant").image(image, caption=prompt,width=400)
